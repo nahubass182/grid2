@@ -1,0 +1,51 @@
+/*grid columns, las lineas verticales del grid se llaman columnas*/
+/*grid rows, las lineas horizontales del grid se llaman filas*/
+/*grid gaps, los espacios entre cada columna/fila se llaman gaps.
+los gaps se pueden ajustar con las propiedades:
+grid-column-gap: ej 50px
+grid-row-gap: ej 50px
+grid gap: ej 50px 100px*/
+
+/*grid-template-columns, define el numero de culumnas en el grid layout, y puede definir
+el ancho de cada columna. si queremos 4 columnas, podemos especificar el width para cada columna o
+poner auto, para que el width de las columans sean iguales. ej auto auto auto auto: 4 columnas iguales.*/
+/*grid-tamplate-row, es lo mismo que la anterior, nada mas que definimos la altura de las filas y cuantas 
+filas queremos.*/
+
+/*con la propiedad justify-content podemos alinear la cuadricula dentro del contenedor.*/
+/*con la propiedad aling-content es lo mismo, pero para alinear verticalmente la cuadricula.*/
+
+.grid-container{
+    display: grid;
+    background-color: cadetblue;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.grid-container div{
+    background-color: chocolate;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+}
+
+.grid-container2{
+    display: grid;
+    background-color: beige;
+    grid-template-columns: auto auto auto;
+    gap: 10px 30px;
+}
+.grid-container2 div{
+    background-color: brown;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/*por defecto un container contiene un grid items por cada columna, pero esto
+se puede cambiar para ponerlo en varias columnas o varias filas.*/
+/*grid-column, define en que columna colocar un item.
+grid-row es lo mismo que grid-column pero define en que fila colocar un item.*/
+/*grid-area se puede usar como una forma mas corta que las propiedades anteriores.
+por ej: grid-area: 1 / 2 / 5 / 6. la primera es la fila donde empieza, la segunda es la columna donde empieza,
+la tercerla la fila donde termina, la cuarta la columna donde termina.*/
